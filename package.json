@@ -1,0 +1,21 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node main.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "chalk-animation": "^2.0.2",
+    "inquirer": "^9.0.1",
+    "ora": "^6.1.2"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^8.2.1"
+  }
+}
