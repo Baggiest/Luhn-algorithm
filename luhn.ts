@@ -52,3 +52,4 @@ export default async function evaluate(cc: string) {
 
     return (await determineResult() ? true : false)
 }
+
