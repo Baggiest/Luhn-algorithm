@@ -11,4 +11,6 @@ and for now you can change the credit card info input manually in the code, by *
 
 ## Go
 
-in progress
+~~in progress~~ Done !
+
+`cd go` then `go run luhn.go`
