@@ -7,7 +7,7 @@ no `npm install` is required dont worry
 
 ### ts-node
 
-`cd languages/JS`
+`cd languages/TS`
 
 then
 
@@ -17,7 +17,7 @@ and for now you can change the credit card info input manually in the code, by *
 
 ### Deno
 
-`cd languages/JS`
+`cd languages/TS`
 
 then
 
