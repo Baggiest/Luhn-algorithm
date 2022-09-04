@@ -41,11 +41,11 @@ export default async function evaluate(cc: string) {
     async function determineResult() {
 
         if (finalSum % 10 === 0) {
-            console.log("It is a valid cc number !")
+            //console.log("It is a valid cc number !")
             return true;
         }
         else {
-            console.log("its not a valid cc number")
+            //console.log("its not a valid cc number")
             return false;
         }
     }

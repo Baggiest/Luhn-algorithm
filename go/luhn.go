@@ -11,16 +11,20 @@ import (
 var finalSum int
 
 func main() {
+
 	cc := "4539479425649801"
-	length := len(cc)
+	_ = cc
+	ccArray := []string{"4539479422649801", "4539479422649801", "4539479425649801", "4539479425649801", "4539479425649801", "4539479425649801","4539479425649801","45394794d25649801","4539479425649801", "4539479425649801"}
 	start := time.Now()
 
-	evalute(cc, length)
+	for i := 0; i < len(ccArray); i++ {
+		evalute(ccArray[i])
+	}
 
-	log.Printf("main, execution time %s\n", time.Since(start))
+	log.Printf("Time to evaluate 10 %s\n", time.Since(start))
 }
 
-func evalute(ccNumString string, length int) bool {
+func evalute(ccNumString string) bool {
 
 	stringNumArray := []byte(ccNumString)
 
@@ -29,14 +33,18 @@ func evalute(ccNumString string, length int) bool {
 	for i := 0; i < len(ccNumString); i++ {
 
 		num, error := strconv.Atoi(string(stringNumArray[i]))
-		_ = error
+
+		if error != nil {
+			fmt.Println("Its a credit card number not a credit card string my brother ⁉️")
+			return false
+		}
 
 		//fmt.Println(num)
 		numArray = append(numArray, num) // changed my mind, this language is fucking awesome
 	}
 
-	fmt.Println(len(numArray))
-	fmt.Println(numArray)
+	// fmt.Println(len(numArray))
+	// fmt.Println(numArray)
 
 	for i := 0; i < len(numArray); i++ {
 		if i%2 == 0 {
@@ -47,12 +55,13 @@ func evalute(ccNumString string, length int) bool {
 	}
 
 	if finalSum%10 == 0 {
-		fmt.Println("This is a valid credit card number")
+		fmt.Println("This is a valid credit card number ✅")
+		finalSum = 0
 		return true
 
 	} else {
-		fmt.Println("This some bullshit")
-		fmt.Println(finalSum)
+		fmt.Println("This is not a valid credit card number ❌")
+		finalSum = 0
 		return false
 	}
 }
