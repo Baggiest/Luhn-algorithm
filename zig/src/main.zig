@@ -2,6 +2,7 @@ const std = @import("std");
 const print = std.debug.print;
 
 pub fn main() !void {
+    
     const test_creditcard_num = "4532591760818986";
     if (verify(test_creditcard_num)) {
         print("Valid :3\n", .{});
